@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Information</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <style>
+      /* Corrected import: Tailwind CDN often includes Inter or a good fallback, but keeping this is fine. */
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: #c6c6c6; /* Tailwind: bg-gray-100 */
+      }
+      /* Custom styles can often be replaced by Tailwind utility classes for consistency. */
+      /* However, keeping a minimal custom block for non-utility classes is fine. */
+      
+      /* Replaced bullet-style class with standard ul/list-disc classes in HTML */
+      
+      /* Keeping custom style for table alternating rows (though can be done in Tailwind) */
+      .student-row:nth-child(odd) {
+          background-color: #f9fafb; /* Tailwind: bg-gray-50 */
+      }
+    </style>
+</head>
+<body class="p-4 md:p-8 antialiased">
+
+    <main class="max-w-xl mx-auto bg-white rounded-xl shadow-2xl overflow-hidden mt-8 p-6 space-y-8" aria-label="Dog Profile and Registration Card">
+
+        <header class="text-center">
+             <h1 class="text-3xl font-bold text-gray-900 mb-2">GRACE UNIVERSITY</h1>
+             <p class="text-gray-600">FIND YOUR DREAM WITH US</p>
+        </header>
+
+     
+         
+        
+        <hr class="border-gray-200">
+
+        <section aria-labelledby="love-heading" class="space-y-3">
+            <h2 id="love-heading" class="text-xl font-extrabold text-red-600 flex items-center">
+                <span class="mr-2 text-2xl" aria-hidden="true">❤️</span> What I Love
+            </h2>
+            <ol class="list-decimal pl-6 text-gray-700 space-y-1 marker:font-bold">
+                <li class="hover:text-red-500 transition duration-150">Bacon treats and belly rubs</li>
+                <li class="hover:text-red-500 transition duration-150">A good long nap in the sun</li>
+                <li class="hover:text-red-500 transition duration-150">Chasing my tail</li>
+            </ol>
+        </section>
+
+        <hr class="border-gray-200">
+
+        <section aria-labelledby="dislike-heading" class="space-y-3">
+            <h2 id="dislike-heading" class="text-xl font-extrabold text-blue-700 flex items-center">
+                <span class="mr-2 text-2xl" aria-hidden="true">😠</span> What I Don't Like
+            </h2>
+            <ul class="list-disc pl-6 text-gray-700 space-y-1 marker:text-blue-500">
+                <li>Loud noises (like the vacuum cleaner)</li>
+                <li>The mailman (he is suspicious)</li>
+                <li>When my human leaves the house</li>
+            </ul>
+        </section>
+
+        <hr class="border-gray-200">
+        
+        <section aria-labelledby="student-info-heading" class="space-y-4">
+            <h2 id="student-info-heading" class="text-xl font-extrabold text-gray-800 flex items-center">
+                <span class="mr-2 text-2xl" aria-hidden="true">👥</span> Associated Information
+            </h2>
+            
+            <div class="overflow-x-auto rounded-lg border border-gray-200 shadow-md">
+                <table class="min-w-full divide-y divide-gray-200" role="table">
+                    <thead class="bg-gray-100">
+                        <tr>
+                            <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider rounded-tl-lg">
+                                N<span class="text-xs align-super">0</span>
+                            </th>
+                            <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                                Name
+                            </th>
+                            <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                                Gender
+                            </th>
+                            <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider rounded-tr-lg">
+                                Age
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-100 bg-white">
+                        <tr class="student-row hover:bg-yellow-50/50 transition duration-150">
+                            <td scope="row" class="px-4 py-3 whitespace-nowrap text-sm font-medium text-gray-900">1</td>
+                            <td class="px-4 py-3 whitespace-nowrap text-sm text-gray-700">Mariya Brome</td>
+                            <td class="px-4 py-3 whitespace-nowrap text-sm text-gray-700">Female</td>
+                            <td class="px-4 py-3 whitespace-nowrap text-sm text-gray-700">21</td>
+                        </tr>
+                        <tr class="student-row hover:bg-yellow-50/50 transition duration-150">
+                            <td scope="row" class="px-4 py-3 whitespace-nowrap text-sm font-medium text-gray-900">2</td>
+                            <td class="px-4 py-3 whitespace-nowrap text-sm text-gray-700">John Doe</td>
+                            <td class="px-4 py-3 whitespace-nowrap text-sm text-gray-700">Male</td>
+                            <td class="px-4 py-3 whitespace-nowrap text-sm text-gray-700">23</td>
+                        </tr>
+                        <tr class="student-row hover:bg-yellow-50/50 transition duration-150">
+                            <td scope="row" class="px-4 py-3 whitespace-nowrap text-sm font-medium text-gray-900">3</td>
+                            <td class="px-4 py-3 whitespace-nowrap text-sm text-gray-700">Alice Smith</td>
+                            <td class="px-4 py-3 whitespace-nowrap text-sm text-gray-700">Female</td>
+                            <td class="px-4 py-3 whitespace-nowrap text-sm text-gray-700">19</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <hr class="border-gray-200">
+
+        <section aria-labelledby="register-heading" class="space-y-4 pt-2">
+            <h2 id="register-heading" class="text-3xl font-serif font-bold text-gray-800 mb-6">Register Your Interest</h2>
+            
+            <form id="simpleRegistrationForm" class="space-y-6">
+                
+                <div>
+                    <label for="reg_name" class="block text-base font-medium text-gray-700 mb-1">Name <span aria-hidden="true" class="text-red-500">*</span></label>
+                    <input type="text" id="reg_name" name="name" required
+                            placeholder="Enter your name"
+                            autocomplete="name"
+                            class="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-indigo-500 focus:border-indigo-500 transition duration-150 ease-in-out">
+                </div>
+
+                <div>
+                    <label for="reg_email" class="block text-base font-medium text-gray-700 mb-1">Email <span aria-hidden="true" class="text-red-500">*</span></label>
+                    <input type="email" id="reg_email" name="email" required
+                            placeholder="Enter your email address"
+                            autocomplete="email"
+                            class="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-indigo-500 focus:border-indigo-500 transition duration-150 ease-in-out">
+                </div>
+
+                <div>
+                    <label for="reg_phone" class="block text-base font-medium text-gray-700 mb-1">Phone Number (Optional)</label>
+                    <input type="tel" id="reg_phone" name="phone"
+                            placeholder="Enter phone number"
+                            autocomplete="tel"
+                            class="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-indigo-500 focus:border-indigo-500 transition duration-150 ease-in-out">
+                </div>
+                <div>
+                    <label for="reg_phone" class="block text-base font-medium text-gray-700 mb-1">Password </label>
+                    <input type="tel" id="reg_phone" name="phone"
+                            placeholder="Enter phone number"
+                            autocomplete="tel"
+                            class="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-indigo-500 focus:border-indigo-500 transition duration-150 ease-in-out">
+                </div>
+                <div>
+                <hr class="border-gray-200">
+
+        <section aria-labelledby="register-heading" class="space-y-4 pt-2">
+            <h2 id="register-heading" class="text-3xl font-serif font-bold text-gray-800 mb-6">Register Your Interest</h2>
+            
+            <form id="simpleRegistrationForm" class="space-y-6">
+                
+                <div>
+                    <label for="reg_place_of_birth" class="block text-base font-medium text-gray-700 mb-1">Place Of Birth</label>
+                    <select id="reg_place_of_birth" name="place_of_birth" 
+                            class="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-indigo-500 focus:border-indigo-500 transition duration-150 ease-in-out">
+                        <option value="">--Choose--</option>
+                        <option value="city_a">Phnom Penh</option>
+                        <option value="city_b">Banteay Meanchey</option>
+                        <option value="city_c">Battambang</option>
+                        <option value="city_a">Kampong Cham</option>
+                        <option value="city_b">Kampong Chhnang</option>
+                        <option value="city_c">Kampong Speu</option>
+                        <option value="city_a">Kampong Thom</option>
+                        <option value="city_b">kampot</option>
+                        <option value="city_c">Kandle</option>
+                        <option value="city_a">Kep</option>
+                        <option value="city_b">Koh Kong</option>
+                        <option value="city_c">Kratie</option>
+                        <option value="city_a">Mondulkiri</option>
+                        <option value="city_b">Oddar Meanchey</option>
+                        <option value="city_c">Pailin</option>
+                        <option value="city_a">Preah Shianouk</option>
+                        <option value="city_b">Preah Vihear</option>
+                        <option value="city_c">Prey Veng</option>
+                        <option value="city_a">Pursat</option>
+                        <option value="city_b">Ratanakiri</option>
+                        <option value="city_c">Siem Reap</option>
+                        <option value="city_a">Stung Sieng</option>
+                        <option value="city_b">Takeo</option>
+                        <option value="city_c">Tbong Khmum</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="reg_color" class="block text-base font-medium text-gray-700 mb-1">Color</label>
+                    <div class="flex items-center space-x-3">
+                        <input type="color" id="reg_color" name="color" value="#000000"
+                                class="h-10 w-16 border border-gray-300 rounded-md cursor-pointer p-1">
+                        <span class="text-sm text-gray-500">Choose a color</span>
+                    </div>
+                </div>
+
+                <div class="space-y-2">
+                    <span class="block text-base font-medium text-gray-700">Gender</span>
+                    <div class="flex items-center space-x-6">
+                        <div class="flex items-center">
+                            <input id="gender_male" name="gender" type="radio" value="male" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300">
+                            <label for="gender_male" class="ml-2 block text-base text-gray-700">Male</label>
+                        </div>
+                        <div class="flex items-center">
+                            <input id="gender_female" name="gender" type="radio" value="female" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300">
+                            <label for="gender_female" class="ml-2 block text-base text-gray-700">Female</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex items-start pt-2">
+                    <div class="flex items-center h-5">
+                        <input id="terms_conditional" name="terms_conditional" type="checkbox" required
+                                class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
+                    </div>
+                    <div class="ml-3 text-sm">
+                        <label for="terms_conditional" class="font-medium text-gray-700">Term and Conditional</label>
+                    </div>
+                </div>
+
+
+                <div>
+                    <button type="submit"
+                    class="w-full flex justify-center py-3 px-4 border border-transparent rounded-lg shadow-md text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition duration-150 ease-in-out">
+                        Submit </button>
+                </div>
+            </form>
+
+            <div id="messageBox" class="mt-4 p-3 text-sm text-yellow-800 bg-yellow-100 rounded-lg border border-yellow-200 hidden" role="status">
+                Details submitted successfully!
+            </div>
+        </section>
+
+    </main> 
+                </div>
+            </form>
+
+        </section>
+
+    </main> <script>
+        // JavaScript to handle form submission without reloading the page
